@@ -1,0 +1,76 @@
+﻿=== PAGE 1 ===
+IAR UDAAN HACKATHON 2026 
+Day 2 
+Problem Statement 
+Theme: AI (cid:127) GenAI (cid:127) RAG 
+DAY 2 
+March 2026 
+IAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 1 
+
+=== PAGE 2 ===
+DAY 2 PROBLEM STATEMENT #03 
+nn 
+PolicyPilot 
+"AI That Navigates Government Schemes So Citizens Don't Have To" 
+India has 650+ central and state government welfare schemes ù but 73% of eligible 
+citizens never claim them because they cannot figure out eligibility, documentation, 
+or the application process. Build an agentic AI system where a citizen describes their 
+situation in plain language or voice, and the agent automatically finds all schemes 
+they qualify for, generates a step-by-step application checklist, and fills out draft 
+application forms using their uploaded identity and income documents. 
+REAL WORLD CONTEXT 
+NITI Aayog published a report in 2024 identifying this exact gap as a national priority. 
+MyScheme.gov.in exists but has zero intelligence layer ù it is just a search box. The 
+Union Budget 2025 allocated dedicated funds for AI-powered citizen services. This 
+solution has a direct, documented path to government adoption. 
+INPUT 
+n 
+Citizen's situation described in plain language or voice (e.g. 'I am a 45-year-old farmer 
+in Gujarat with 2 acres of land and annual income below 1.5 lakh') 
+n 
+Uploaded identity documents: Aadhaar, income certificate, caste certificate (optional) 
+n 
+State of residence for filtering central vs state scheme eligibility 
+n 
+Specific need category: education, agriculture, health, housing, employment 
+EXPECTED OUTPUT 
+n 
+Full list of schemes the citizen qualifies for ù with eligibility match reasoning 
+n 
+Step-by-step application checklist for each scheme: documents needed, offices to visit, 
+deadlines 
+n 
+Auto-filled draft application form using details from uploaded documents 
+n 
+Conflict flag: if central and state versions of the same scheme have contradicting 
+criteria, the system must surface and explain the conflict explicitly 
+n 
+Plain-language summary in Hindi or the citizen's preferred regional language 
+THE TWIST 
+IAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 2 
+
+=== PAGE 3 ===
+The agent must use RAG over actual official scheme PDFs ù not summarized versions 
+ù and handle conflicting eligibility criteria across central vs state versions of the same 
+scheme intelligently. When two government documents contradict each other, the agent 
+must flag the conflict explicitly rather than silently picking one. Hiding contradictions or 
+hallucinating eligibility criteria is an immediate disqualification. Every scheme 
+recommendation must cite the exact PDF clause it came from. 
+DELIVERABLES 
+n 
+Working agentic prototype with plain-language or voice input interface 
+n 
+RAG pipeline over at least 5 real government scheme PDFs 
+n 
+Live demo: describe a citizen profile, show matched schemes + application checklist 
+n 
+Conflict detection demo: show the system handling two contradicting scheme clauses 
+n 
+Auto-filled draft form output using at least one uploaded document 
+n 
+README or 2-minute walkthrough explaining the agentic architecture and retrieval 
+design 
+STACK HINT Agentic AI + RAG over government PDF corpus + Multilingual voice input + 
+Conflict detection + Form auto-fill with document grounding 
+IAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 3 
+

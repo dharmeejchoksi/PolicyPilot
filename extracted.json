@@ -1,0 +1,503 @@
+{
+  "pdf": [
+    {
+      "page": 1,
+      "lines": [
+        "IAR UDAAN HACKATHON 2026",
+        "Day 2",
+        "Problem Statement",
+        "Theme: AI (cid:127) GenAI (cid:127) RAG",
+        "DAY 2",
+        "March 2026",
+        "IAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 1"
+      ],
+      "tables": [
+        [
+          [
+            ""
+          ],
+          [
+            ""
+          ],
+          [
+            "IAR UDAAN HACKATHON 2026\nDay 2\nProblem Statement\nTheme: AI (cid:127) GenAI (cid:127) RAG\nDAY 2\nMarch 2026\nIAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 1"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "lines": [
+        "DAY 2 PROBLEM STATEMENT #03",
+        "nn",
+        "PolicyPilot",
+        "\"AI That Navigates Government Schemes So Citizens Don't Have To\"",
+        "India has 650+ central and state government welfare schemes — but 73% of eligible",
+        "citizens never claim them because they cannot figure out eligibility, documentation,",
+        "or the application process. Build an agentic AI system where a citizen describes their",
+        "situation in plain language or voice, and the agent automatically finds all schemes",
+        "they qualify for, generates a step-by-step application checklist, and fills out draft",
+        "application forms using their uploaded identity and income documents.",
+        "REAL WORLD CONTEXT",
+        "NITI Aayog published a report in 2024 identifying this exact gap as a national priority.",
+        "MyScheme.gov.in exists but has zero intelligence layer — it is just a search box. The",
+        "Union Budget 2025 allocated dedicated funds for AI-powered citizen services. This",
+        "solution has a direct, documented path to government adoption.",
+        "INPUT",
+        "n",
+        "Citizen's situation described in plain language or voice (e.g. 'I am a 45-year-old farmer",
+        "in Gujarat with 2 acres of land and annual income below 1.5 lakh')",
+        "n",
+        "Uploaded identity documents: Aadhaar, income certificate, caste certificate (optional)",
+        "n",
+        "State of residence for filtering central vs state scheme eligibility",
+        "n",
+        "Specific need category: education, agriculture, health, housing, employment",
+        "EXPECTED OUTPUT",
+        "n",
+        "Full list of schemes the citizen qualifies for — with eligibility match reasoning",
+        "n",
+        "Step-by-step application checklist for each scheme: documents needed, offices to visit,",
+        "deadlines",
+        "n",
+        "Auto-filled draft application form using details from uploaded documents",
+        "n",
+        "Conflict flag: if central and state versions of the same scheme have contradicting",
+        "criteria, the system must surface and explain the conflict explicitly",
+        "n",
+        "Plain-language summary in Hindi or the citizen's preferred regional language",
+        "THE TWIST",
+        "IAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 2"
+      ],
+      "tables": [
+        [
+          [
+            ""
+          ],
+          [
+            ""
+          ],
+          [
+            "DAY 2 PROBLEM STATEMENT #03\nnn\nPolicyPilot\n\"AI That Navigates Government Schemes So Citizens Don't Have To\"\nIndia has 650+ central and state government welfare schemes — but 73% of eligible\ncitizens never claim them because they cannot figure out eligibility, documentation,\nor the application process. Build an agentic AI system where a citizen describes their\nsituation in plain language or voice, and the agent automatically finds all schemes\nthey qualify for, generates a step-by-step application checklist, and fills out draft\napplication forms using their uploaded identity and income documents.\nREAL WORLD CONTEXT\nNITI Aayog published a report in 2024 identifying this exact gap as a national priority.\nMyScheme.gov.in exists but has zero intelligence layer — it is just a search box. The\nUnion Budget 2025 allocated dedicated funds for AI-powered citizen services. This\nsolution has a direct, documented path to government adoption.\nINPUT\nn Citizen's situation described in plain language or voice (e.g. 'I am a 45-year-old farmer\nin Gujarat with 2 acres of land and annual income below 1.5 lakh')\nn Uploaded identity documents: Aadhaar, income certificate, caste certificate (optional)\nn State of residence for filtering central vs state scheme eligibility\nn Specific need category: education, agriculture, health, housing, employment\nEXPECTED OUTPUT\nn Full list of schemes the citizen qualifies for — with eligibility match reasoning\nn Step-by-step application checklist for each scheme: documents needed, offices to visit,\ndeadlines\nn Auto-filled draft application form using details from uploaded documents\nn Conflict flag: if central and state versions of the same scheme have contradicting\ncriteria, the system must surface and explain the conflict explicitly\nn Plain-language summary in Hindi or the citizen's preferred regional language\nTHE TWIST\nIAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 2"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "lines": [
+        "The agent must use RAG over actual official scheme PDFs — not summarized versions",
+        "— and handle conflicting eligibility criteria across central vs state versions of the same",
+        "scheme intelligently. When two government documents contradict each other, the agent",
+        "must flag the conflict explicitly rather than silently picking one. Hiding contradictions or",
+        "hallucinating eligibility criteria is an immediate disqualification. Every scheme",
+        "recommendation must cite the exact PDF clause it came from.",
+        "DELIVERABLES",
+        "n",
+        "Working agentic prototype with plain-language or voice input interface",
+        "n",
+        "RAG pipeline over at least 5 real government scheme PDFs",
+        "n",
+        "Live demo: describe a citizen profile, show matched schemes + application checklist",
+        "n",
+        "Conflict detection demo: show the system handling two contradicting scheme clauses",
+        "n",
+        "Auto-filled draft form output using at least one uploaded document",
+        "n",
+        "README or 2-minute walkthrough explaining the agentic architecture and retrieval",
+        "design",
+        "STACK HINT Agentic AI + RAG over government PDF corpus + Multilingual voice input +",
+        "Conflict detection + Form auto-fill with document grounding",
+        "IAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 3"
+      ],
+      "tables": [
+        [
+          [
+            ""
+          ],
+          [
+            ""
+          ],
+          [
+            "The agent must use RAG over actual official scheme PDFs — not summarized versions\n— and handle conflicting eligibility criteria across central vs state versions of the same\nscheme intelligently. When two government documents contradict each other, the agent\nmust flag the conflict explicitly rather than silently picking one. Hiding contradictions or\nhallucinating eligibility criteria is an immediate disqualification. Every scheme\nrecommendation must cite the exact PDF clause it came from.\nDELIVERABLES\nn Working agentic prototype with plain-language or voice input interface\nn RAG pipeline over at least 5 real government scheme PDFs\nn Live demo: describe a citizen profile, show matched schemes + application checklist\nn Conflict detection demo: show the system handling two contradicting scheme clauses\nn Auto-filled draft form output using at least one uploaded document\nn README or 2-minute walkthrough explaining the agentic architecture and retrieval\ndesign\nSTACK HINT Agentic AI + RAG over government PDF corpus + Multilingual voice input +\nConflict detection + Form auto-fill with document grounding\nIAR Udaan Hackathon 2026 (cid:127) Day 2 Problem Statement (cid:127) Page 3"
+          ]
+        ]
+      ]
+    }
+  ],
+  "pptx": [
+    {
+      "slide": 1,
+      "texts": [
+        "Policy",
+        "Pilot",
+        "AI That Navigates Government Schemes",
+        "So Citizens Don't Have To",
+        "IAR Udaan",
+        "Hackathon",
+        "Dharmee Choksi   ·   Vaidik Prajapati   ·   Aena Patel   ·   Vishal Sharma",
+        "March 2026\u000b\u000bAI  ·  GenAI  ·  RAG"
+      ],
+      "tables": []
+    },
+    {
+      "slide": 2,
+      "texts": [
+        "THE PROBLEM",
+        "73%",
+        "of eligible citizens never claim",
+        "the government welfare schemes",
+        "they actually qualify for.",
+        "Why does this happen?",
+        "✕",
+        "They don't even know which schemes exist",
+        "✕",
+        "Eligibility criteria is buried in PDFs",
+        "✕",
+        "Application process is confusing & multi-step",
+        "✕",
+        "Everything is in English — not everyone reads it",
+        "✕",
+        "Central and state schemes conflict — nobody flags it",
+        "India has 650+ central & state schemes. The problem isn't lack of schemes — it's lack of navigation."
+      ],
+      "tables": []
+    },
+    {
+      "slide": 3,
+      "texts": [
+        "THE PROBLEM — REAL WORLD CONTEXT",
+        "This isn't just our observation.",
+        "These are documented facts — not assumptions we made up for the hackathon.",
+        "NITI Aayog · 2024",
+        "It's a National Priority",
+        "NITI Aayog's 2024 report officially flagged the scheme-discovery gap as a national problem that needs fixing urgently. This is the government itself saying the current system isn't working.",
+        "MyScheme.gov.in",
+        "The Portal Exists. It Just Has Zero Intelligence.",
+        "India already has an official scheme portal — but it's literally just a search box. No eligibility matching, no document guidance, no language support, no conflict detection. Nothing smart.",
+        "Union Budget 2025",
+        "Money Has Been Allocated",
+        "The Union Budget 2025 specifically allocated funds for AI-powered citizen services. There's a real, documented path from what we're building here to actual government adoption."
+      ],
+      "tables": []
+    },
+    {
+      "slide": 4,
+      "texts": [
+        "OBJECTIVE",
+        "What We're Trying to Solve",
+        "Build a system where any citizen — regardless of education level, language, or tech literacy — can describe their situation in plain words and instantly know which government schemes they qualify for, what documents they need, and how to actually apply.",
+        "Specifically, we want to:",
+        "01",
+        "Match citizen profiles to eligible schemes automatically — with reasoning",
+        "02",
+        "Generate a step-by-step application checklist for each matched scheme",
+        "03",
+        "Auto-fill draft application forms using uploaded identity documents",
+        "04",
+        "Detect and explicitly flag conflicts between Central and State scheme versions"
+      ],
+      "tables": []
+    },
+    {
+      "slide": 5,
+      "texts": [
+        "POSSIBLE SOLUTIONS — WHAT EXISTS TODAY",
+        "We looked at 3 existing approaches first.",
+        "Before building anything, we asked — does something like this already exist? Here's what we found:",
+        "01",
+        "Manual Search",
+        "& Offline Help",
+        "Citizens rely on local government offices, NGOs, or relatives to discover schemes manually.",
+        "✕",
+        "Doesn't scale to 500M+ citizens",
+        "✕",
+        "Entirely dependent on who you know",
+        "✕",
+        "Information is often outdated or wrong",
+        "Too slow. Too unequal.",
+        "02",
+        "Generic AI",
+        "Chatbots",
+        "Use a general-purpose chatbot (ChatGPT, etc.) to answer questions about government schemes.",
+        "✕",
+        "Halluccinates eligibility criteria",
+        "✕",
+        "No grounding in actual PDF documents",
+        "✕",
+        "Can't detect Central vs State conflicts",
+        "Helpful but dangerously unreliable.",
+        "03",
+        "MyScheme.gov.in",
+        "(Existing Portal)",
+        "The government's own portal — searchable database of central and some state schemes.",
+        "✕",
+        "Just a search box — no eligibility check",
+        "✕",
+        "No personalization or matching",
+        "✕",
+        "English-only, no regional language",
+        "Right idea. No intelligence."
+      ],
+      "tables": []
+    },
+    {
+      "slide": 6,
+      "texts": [
+        "POSSIBLE SOLUTIONS — THE GAP",
+        "So what's actually missing?",
+        "Every existing approach solves part of the problem. None of them solve all of it — and the gap they leave is exactly what causes that 73% number.",
+        "Approach",
+        "Eligibility",
+        "Matching",
+        "Real PDF",
+        "Grounding",
+        "Conflict",
+        "Detection",
+        "Form",
+        "Auto-fill",
+        "Regional",
+        "Language",
+        "Manual Help",
+        "Partial",
+        "✕",
+        "✕",
+        "✕",
+        "Partial",
+        "Generic Chatbot",
+        "Partial",
+        "✕",
+        "✕",
+        "✕",
+        "Partial",
+        "MyScheme.gov.in",
+        "✕",
+        "✕",
+        "✕",
+        "✕",
+        "✕",
+        "PolicyPilot ✓",
+        "✓",
+        "✓",
+        "✓",
+        "✓",
+        "✓",
+        "PolicyPilot is the only approach that addresses all five gaps simultaneously."
+      ],
+      "tables": []
+    },
+    {
+      "slide": 7,
+      "texts": [
+        "Our Solution",
+        "PolicyPilot",
+        "An agentic AI that reads actual government PDFs, matches citizens to schemes they qualify for, detects policy conflicts, and fills out their applications — all from a plain language description.",
+        "Not a search box. Not a generic chatbot. An actual intelligent agent.",
+        "What makes it different",
+        "01",
+        "Agentic AI core",
+        "02",
+        "RAG over real PDFs",
+        "03",
+        "Conflict detection",
+        "04",
+        "Multilingual output"
+      ],
+      "tables": []
+    },
+    {
+      "slide": 8,
+      "texts": [
+        "OUR SOLUTION — HOW IT WORKS",
+        "A citizen's journey, step by step.",
+        "1",
+        "Describe",
+        "Voice or plain text — no forms, no dropdowns",
+        "2",
+        "Upload",
+        "Aadhaar + income cert — everything else is auto-read",
+        "3",
+        "Match",
+        "Agent queries RAG pipeline over real scheme PDFs",
+        "4",
+        "Check",
+        "Conflict engine flags any Central vs State contradictions",
+        "5",
+        "Deliver",
+        "Checklist + pre-filled form + Hindi summary",
+        "EXAMPLE — TRY THIS IN THE DEMO",
+        "\"I am a 45-year-old farmer in Gujarat, 2 acres of land, income below ₹1.5 lakh.\"",
+        "→  Matched:  PM-KISAN  ·  Pradhan Mantri Fasal Bima Yojana  ·  Gujarat Kisan Sahay  ·  Soil Health Card Scheme",
+        "→  Output:  Full checklist per scheme  ·  PM-KISAN draft form pre-filled  ·  Conflict flag raised on PMFBY (Central vs Gujarat version)"
+      ],
+      "tables": []
+    },
+    {
+      "slide": 9,
+      "texts": [
+        "ARCHITECTURE",
+        "Under the Hood",
+        "RAG Pipeline",
+        "Ingest",
+        "5+ real official govt. scheme PDFs loaded",
+        "Chunk",
+        "Clause-level parsing — not page-level",
+        "Embed",
+        "SentenceTransformers → vector DB",
+        "Retrieve",
+        "Citizen query → top-k clauses returned",
+        "Generate",
+        "LLM responds, citing exact PDF clause",
+        "Conflict Detection Engine",
+        "CENTRAL PDF",
+        "Income limit: ₹1,50,000",
+        "Min. land: 0.5 acres",
+        "GUJARAT PDF",
+        "Income limit: ₹2,00,000",
+        "Min. land: 1 acre",
+        "⚠  CONFLICT DETECTED",
+        "Income limit: ₹1.5L (Central) vs ₹2L (Gujarat)",
+        "Land: 0.5 acres (Central) vs 1 acre (Gujarat)",
+        "→ Both clauses surfaced. Both sources cited. Nothing hidden.",
+        "The problem statement says hiding contradictions = immediate DQ. PolicyPilot never hides them."
+      ],
+      "tables": []
+    },
+    {
+      "slide": 10,
+      "texts": [
+        "ARCHITECTURE — AGENT DESIGN",
+        "The PolicyPilot Agent",
+        "PolicyPilot",
+        "Agent Core",
+        "Voice / Text Parser",
+        "Document OCR Reader",
+        "Vector DB  (FAISS)",
+        "Scheme Matcher",
+        "Conflict Detector",
+        "Form Auto-Filler",
+        "Output →   Scheme List   ·   Application Checklist   ·   Conflict Flags   ·   Draft Form   ·   Hindi Summary",
+        "Stack:  LangChain/LangGraph  ·  GPT-4o  ·  LlamaIndex  ·  FAISS/Pinecone  ·  Whisper  ·  PyMuPDF  ·  FastAPI  ·  React"
+      ],
+      "tables": []
+    },
+    {
+      "slide": 11,
+      "texts": [
+        "OUR SOLUTION — KEY FEATURES",
+        "What PolicyPilot Actually Does",
+        "01",
+        "Plain Language Input",
+        "You say it in your own words — or speak it. No dropdowns, no forms. The agent figures out the rest from what you've said.",
+        "02",
+        "Real PDF Grounding",
+        "Every recommendation traces back to an exact clause in an official government PDF. No guessing, no paraphrasing from memory.",
+        "03",
+        "Conflict Detection",
+        "When Central and State versions of the same scheme contradict each other, we flag it explicitly — never silently pick one over the other.",
+        "04",
+        "Auto-filled Draft Form",
+        "Upload your Aadhaar and income certificate. We extract your details and pre-fill the application form. You just review and submit.",
+        "05",
+        "Step-by-step Checklist",
+        "Not just 'you qualify' — we tell you exactly which documents to bring, which office to visit, and what the deadline is for each scheme.",
+        "06",
+        "Hindi & Regional Languages",
+        "Plain-language summary of all results in Hindi or your preferred regional language — no legal jargon, no English barrier."
+      ],
+      "tables": []
+    },
+    {
+      "slide": 12,
+      "texts": [
+        "DEMO",
+        "Four Things We'll Show You Live",
+        "DEMO 1",
+        "Plain Language → Matched Schemes",
+        "Type or speak a citizen description → agent outputs matched schemes, each with eligibility reasoning and exact PDF clause citations.",
+        "DEMO 2",
+        "Conflict Detection in Action",
+        "Two official PDFs with contradicting criteria → system flags it visibly, cites both sources. Nothing silently resolved.",
+        "DEMO 3",
+        "Auto-filled Application Form",
+        "Upload Aadhaar + income cert → watch the PM-KISAN form fill itself. Citizen only fills in what's not in their documents.",
+        "DEMO 4",
+        "Hindi Output",
+        "Same results, plain Hindi. No jargon. No assumptions about the citizen's English ability. It just works in their language."
+      ],
+      "tables": []
+    },
+    {
+      "slide": 13,
+      "texts": [
+        "IMPACT",
+        "Why This Actually Matters",
+        "We're not claiming this will fix everything. But if even a fraction of those 73% of citizens start claiming what they're entitled to — that's real, measurable change.",
+        "650+",
+        "Central & State",
+        "Schemes Covered",
+        "500M+",
+        "Potential Citizens",
+        "Who Could Benefit",
+        "22+",
+        "Indian Languages",
+        "Supported",
+        "0",
+        "Times It Should",
+        "Hide a Conflict",
+        "Where we go from here",
+        "Now",
+        "5+ PDFs, working prototype, conflict detection live",
+        "3 months",
+        "50+ schemes, all states, voice input, feedback loop",
+        "6 months",
+        "MyScheme.gov.in API, 650+ schemes, govt. partnership",
+        "12 months",
+        "National rollout, Gram Panchayat kiosks, offline mode"
+      ],
+      "tables": []
+    },
+    {
+      "slide": 14,
+      "texts": [
+        "THE TEAM",
+        "Who Built This",
+        "Four of us — one hackathon, one real problem, one weekend.",
+        "DC",
+        "Dharmee Choksi",
+        "IAR Udaan Hackathon 2026 ·",
+        "VP",
+        "Vaidik Prajapati",
+        "IAR Udaan Hackathon 2026 ·",
+        "AP",
+        "Aena Patel",
+        "IAR Udaan Hackathon 2026 ·",
+        "VS",
+        "Vishal Sharma",
+        "IAR Udaan Hackathon 2026  ·",
+        "IAR Udaan Hackathon 2026  ·  March 2026"
+      ],
+      "tables": []
+    },
+    {
+      "slide": 15,
+      "texts": [
+        "Thank",
+        "You.",
+        "\"Empowering every Indian citizen",
+        "to access the welfare they deserve.\"",
+        "IAR Udaan Hackathon 2026  ·  March 2026",
+        "T E A M",
+        "1",
+        "Dharmee Choksi",
+        "2",
+        "Vaidik Prajapati",
+        "3",
+        "Aena Patel",
+        "4",
+        "Vishal Sharma"
+      ],
+      "tables": []
+    }
+  ]
+}
