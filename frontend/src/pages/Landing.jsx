@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { API_BASE } from '../config'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -147,7 +148,7 @@ export default function Landing() {
     setCitizenProfile(profile)
 
     try {
-      const res = await fetch('/api/match', {
+      const res = await fetch(`${API_BASE}/api/match`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(profile),
@@ -673,6 +674,29 @@ function getMockSchemes(profile) {
       deadline: 'No deadline',
       link: 'https://pmjay.gov.in',
     })
+  }
+
+  // ── Age-based filtering: if user is under 18, only show Health schemes ──
+  const agePatterns = [
+    /(\d{1,3})\s*[-–]?\s*(?:year|yr|yrs|years?)[\s-]*old/i,
+    /(?:age|aged|umr|उम्र|आयु)\s*[:=]?\s*(\d{1,3})/i,
+    /(\d{1,3})\s*(?:sal|साल|वर्ष)/i,
+    /(?:i am|i'm|main|मैं)\s+(?:a\s+)?(\d{1,3})/i,
+  ]
+  let userAge = null
+  for (const pattern of agePatterns) {
+    const match = desc.match(pattern)
+    if (match) {
+      const age = parseInt(match[1] || match[2], 10)
+      if (age >= 1 && age <= 120) { userAge = age; break }
+    }
+  }
+
+  if (userAge !== null && userAge < 18) {
+    return {
+      schemes: schemes.filter(s => s.category === 'Health'),
+      conflicts: [],
+    }
   }
 
   return { schemes, conflicts }

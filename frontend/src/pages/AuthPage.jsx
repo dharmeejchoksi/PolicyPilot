@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { API_BASE } from '../config'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -45,7 +46,7 @@ export default function AuthPage() {
     setIsSending(true)
     setError('')
     try {
-      const res = await fetch('/api/auth/send-otp', {
+      const res = await fetch(`${API_BASE}/api/auth/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone }),
@@ -91,7 +92,7 @@ export default function AuthPage() {
     setIsVerifying(true)
     setError('')
     try {
-      const res = await fetch('/api/auth/verify-otp', {
+      const res = await fetch(`${API_BASE}/api/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone, otp: otp.join('') }),
@@ -116,7 +117,7 @@ export default function AuthPage() {
   const handleDigiLocker = async () => {
     setDigiStatus('connecting')
     try {
-      const res = await fetch('/api/auth/digilocker', { method: 'POST' })
+      const res = await fetch(`${API_BASE}/api/auth/digilocker`, { method: 'POST' })
       const data = await res.json()
       if (data.success) {
         setDigiStatus('success')
@@ -133,7 +134,7 @@ export default function AuthPage() {
 
   const handleGuest = async () => {
     try {
-      const res = await fetch('/api/auth/guest', { method: 'POST' })
+      const res = await fetch(`${API_BASE}/api/auth/guest`, { method: 'POST' })
       const data = await res.json()
       if (data.success) {
         login(data.user)

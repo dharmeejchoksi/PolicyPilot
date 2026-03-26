@@ -16,7 +16,6 @@ const recentQueries = [
   { id: 1, description: 'Farmer in Gujarat, 2 acres, income below 1.5 lakh', state: 'Gujarat', categories: ['Agriculture'], schemesFound: 4, conflicts: 2, time: '2 min ago', method: 'voice' },
   { id: 2, description: 'SC student pursuing B.Tech in Delhi', state: 'Delhi', categories: ['Education'], schemesFound: 3, conflicts: 0, time: '8 min ago', method: 'text' },
   { id: 3, description: 'Unemployed youth in UP, age 22, BPL family', state: 'Uttar Pradesh', categories: ['Employment', 'Health'], schemesFound: 5, conflicts: 1, time: '15 min ago', method: 'digilocker' },
-  { id: 4, description: 'Widow in Maharashtra needing housing support', state: 'Maharashtra', categories: ['Housing'], schemesFound: 2, conflicts: 0, time: '22 min ago', method: 'text' },
   { id: 5, description: 'Tribal farmer in Jharkhand, organic farming', state: 'Jharkhand', categories: ['Agriculture'], schemesFound: 6, conflicts: 3, time: '31 min ago', method: 'voice' },
   { id: 6, description: 'College student in Kerala, family income 3L', state: 'Kerala', categories: ['Education'], schemesFound: 4, conflicts: 1, time: '45 min ago', method: 'text' },
   { id: 7, description: 'Pregnant woman in Bihar, BPL card holder', state: 'Bihar', categories: ['Health'], schemesFound: 3, conflicts: 0, time: '1 hr ago', method: 'text' },
@@ -27,7 +26,6 @@ const schemeCategories = [
   { name: 'Employment', count: 10, color: '#f59e0b', icon: '💼' },
   { name: 'Health', count: 10, color: '#10b981', icon: '🏥' },
   { name: 'Agriculture', count: 10, color: '#0d9488', icon: '🌾' },
-  { name: 'Housing', count: 1, color: '#8b5cf6', icon: '🏠' },
 ]
 
 // Activity feed items

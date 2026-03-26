@@ -1,8 +1,27 @@
+import re
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
 from schemes_data import SCHEMES, get_schemes_by_category
+
+
+def extract_age(text: str) -> int | None:
+    """Extract age from user description text using common patterns."""
+    patterns = [
+        r'(\d{1,3})\s*[-–]?\s*(?:year|yr|yrs|years?)[\s-]*old',   # "15 year old", "15-year-old"
+        r'(?:age|aged|umr|उम्र|आयु)\s*[:=]?\s*(\d{1,3})',          # "age 15", "उम्र 15"
+        r'(\d{1,3})\s*(?:sal|साल|वर्ष)',                            # "15 साल", "15 वर्ष"
+        r'(?:i am|i\'m|main|मैं)\s+(?:a\s+)?(\d{1,3})',            # "I am 15", "मैं 15"
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            age = int(match.group(1) if match.group(1) else match.group(2) if match.lastindex >= 2 else match.group(1))
+            if 1 <= age <= 120:
+                return age
+    return None
 from conflict_detector import detect_conflicts
 from form_filler import auto_fill_form
 from database import (
@@ -134,6 +153,15 @@ def match_schemes(profile: CitizenProfile):
             })
     
     matched.sort(key=lambda x: x["matchPercentage"], reverse=True)
+
+    # ─── Age-based filtering ───────────────────────────
+    # If user is below 18, only show Health schemes
+    user_age = extract_age(profile.description)
+    is_minor = user_age is not None and user_age < 18
+
+    if is_minor:
+        matched = [s for s in matched if s["category"].lower() == "health"]
+
     conflicts = detect_conflicts(matched, profile.state)
 
     # Log query to database
@@ -149,7 +177,7 @@ def match_schemes(profile: CitizenProfile):
     except Exception:
         pass
 
-    return {"schemes": matched[:10], "conflicts": conflicts}
+    return {"schemes": matched[:10], "conflicts": conflicts, "is_minor": is_minor}
 
 
 @app.get("/api/schemes")
